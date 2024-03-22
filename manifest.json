@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "HIBP Checker",
+    "version": "1.0.0",
+    "description": "A Chrome extension that checks for HIBP data breaches",
+    "icons": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    },
+    "action": {
+      "default_icon": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+      },
+      "default_title": "HIBP Checker",
+      "default_popup": "popup.html"
+    },
+    "permissions": ["alarms", "activeTab"],
+    "background": {
+      "service_worker": "service-worker.js"
+    },
+    "content_security_policy": {
+        "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';"
+      }
+  }
